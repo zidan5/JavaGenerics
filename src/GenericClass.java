@@ -4,20 +4,19 @@ public class GenericClass<T> {
         public void set(T input){  // Setter
             variable = input;
         }
-        public T get(){  // Getter
-            return variable;
+        public void get(){  // Getter
+            System.out.println(variable);
         }
 
     public static void main(String[] Args){
 
             GenericClass gen = new GenericClass<Integer>(); //Using Integers in Generic class
             gen.set(3);
-            int intValue = (int)gen.get();
-            System.out.println(intValue);
+            gen.get();
 
             GenericClass gen1 =new GenericClass<String>(); //Using String in Generic class
             gen1.set("Generic class");
-            String stringValue = gen1.get().toString();
-            System.out.println(stringValue);
+            gen1.get();
+        
     }
 }
